@@ -304,13 +304,25 @@ export default function App() {
               {...fadeIn}
               className="order-2 md:order-1 h-[400px] rounded-3xl overflow-hidden bg-gray-200"
             >
-              {/* Map Placeholder - In a real app, use Google Maps iframe or API */}
-              <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" 
-                alt="Map of Yabucoa area" 
-                className="w-full h-full object-cover opacity-80"
-                referrerPolicy="no-referrer"
-              />
+              <video 
+                autoPlay 
+                muted 
+                loop 
+                playsInline 
+                preload="auto"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '16px',
+                  display: 'block'
+                }}
+              >
+                <source 
+                  src="https://res.cloudinary.com/djodah1dm/video/upload/Yabacoa_Drone_wroult.mp4" 
+                  type="video/mp4" 
+                />
+              </video>
             </motion.div>
             <motion.div {...fadeIn} className="order-1 md:order-2">
               <div className="flex items-center gap-3 mb-6 text-[var(--color-gold)]">
