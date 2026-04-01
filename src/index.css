@@ -18,4 +18,25 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .hero-video {
+    display: block;
+  }
+  .hero-image-bg {
+    display: none;
+  }
+  @media (min-width: 769px) {
+    .hero-video {
+      display: none;
+    }
+    .hero-image-bg {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .experience-reel-section {
+      display: none;
+    }
+  }
 }

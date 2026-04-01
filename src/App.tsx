@@ -96,18 +96,29 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/IMG_0926.JPG" 
-            alt="Mountain view from La Casa María" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+      <section className="relative h-screen min-h-[100vh] flex items-center justify-center overflow-hidden">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          preload="auto"
+          className="hero-video absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source 
+            src="https://res.cloudinary.com/djodah1dm/video/upload/TPV-Feature_8_vervug.mp4" 
+            type="video/mp4" 
           />
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
+        </video>
+        <img 
+          src="/IMG_0926.JPG" 
+          alt="Mountain view from La Casa María" 
+          className="hero-image-bg absolute top-0 left-0 w-full h-full object-cover z-0"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
         
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
+        <div className="relative z-[2] text-center px-6 max-w-4xl mx-auto mt-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -267,7 +278,7 @@ export default function App() {
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
               className="rounded-2xl overflow-hidden h-[250px] md:h-auto"
             >
-              <img src="/IMG_0695.JPG" alt="Exterior View" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <img src="/IMG_0695.JPG" alt="Property View" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
@@ -334,6 +345,73 @@ export default function App() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Reel Section (Desktop Only) */}
+      <section className="experience-reel-section bg-[var(--color-forest)] py-[100px] px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 gap-[80px] items-center">
+          {/* Left Column - Copy */}
+          <div className="text-left">
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
+              Some Places You Have to Feel to Understand.
+            </h2>
+            <div className="space-y-6 text-white/80 text-lg leading-relaxed mb-10">
+              <p>
+                Puerto Rico's southeast coast doesn't announce itself. 
+                There are no billboards, no resort shuttles, no crowds 
+                pointing you where to look. The mountains rise quietly 
+                from the coast. The mist shows up before sunrise and 
+                disappears by 9am. The beaches are empty because most 
+                people never make it this far south.
+              </p>
+              <p>
+                La Casa María sits in the middle of all of it. A valley 
+                that changes every hour of the day. A kitchen that becomes 
+                the center of everything by night two. A game room that 
+                no one is ready to leave at midnight. Balconies that make 
+                mornings feel like a decision you got completely right.
+              </p>
+              <p>
+                You came to Puerto Rico for something real. 
+                This is where you find it.
+              </p>
+            </div>
+            <a 
+              href={AIRBNB_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[var(--color-terracotta)] hover:bg-[var(--color-terracotta-hover)] text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Check Availability &rarr;
+            </a>
+            <span className="block text-sm text-white/60 mt-4">
+              From $175/night &middot; Sleeps 8 &middot; Yabucoa, Puerto Rico
+            </span>
+          </div>
+
+          {/* Right Column - Video */}
+          <div>
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              style={{
+                width: '100%',
+                maxWidth: '340px',
+                borderRadius: '20px',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
+                display: 'block',
+                margin: '0 auto'
+              }}
+            >
+              <source 
+                src="https://res.cloudinary.com/djodah1dm/video/upload/TPV-Feature_8_vervug.mp4" 
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </section>
