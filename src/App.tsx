@@ -278,7 +278,7 @@ export default function App() {
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
               className="rounded-2xl overflow-hidden h-[250px] md:h-auto"
             >
-              <img src="/IMG_0695.JPG" alt="Property View" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <img src="/IMG_0698-2.jpg" alt="Kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
